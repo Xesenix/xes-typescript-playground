@@ -4,4 +4,4 @@ console.log('hello world');
 
 const a = new A('test');
 
-console.log('property', a.property);
+console.log('property value:', a.property, ' expected value test'); // expected value test

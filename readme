@@ -1,0 +1,19 @@
+# Install
+
+Run `npm i`
+
+# Description
+
+I have prepared build via `babel-loader` in `webpack` and `typescript` compiler to compare results.
+
+For typescript build run
+
+```
+npm run tsc
+```
+
+For webpack build run
+
+```
+npm run build
+```
