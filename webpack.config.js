@@ -21,16 +21,14 @@ const webpackConfigFactory = () => {
 		entry: {
 			main: './src/index.ts',
 		},
-		mode: 'development',
+		mode: 'production',
 		output: {
 			filename: '[name].boundle.js',
 			path: path.resolve(__dirname, 'dist'),
 		},
 		devServer: {
 			contentBase: './dist',
-			hot: true,
 		},
-		devtool: 'cheap-eval-source-map',
 		resolve: {
 			extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
 			modules: ['node_modules'],
@@ -40,23 +38,6 @@ const webpackConfigFactory = () => {
 				...babelRulesFactory(),
 			],
 		},
-		plugins: [
-			new baseWebpack.HotModuleReplacementPlugin(),
-			new baseWebpack.LoaderOptionsPlugin({
-				debug: true,
-				minimize: true,
-				options: {
-					tslint: {
-						emitErrors: true,
-						failOnHint: true,
-					},
-				},
-				sourceMap: true,
-			}),
-			new baseWebpack.EnvironmentPlugin({
-				NODE_ENV: 'development',
-			}),
-		].filter((p) => !!p),
 	};
 
 	return webpackConfig;

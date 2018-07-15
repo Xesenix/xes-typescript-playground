@@ -1,10 +1,6 @@
-console.log('hello world')
+import { A } from './a';
 
-class A {
-	constructor(
-		public property: any,
-	) {}
-};
+console.log('hello world');
 
 const a = new A('test');
 
