@@ -1,0 +1,28 @@
+{
+  "name": "xes-typescript-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+		"build": "cross-env ENV=development webpack --config webpack.config.js",
+    "serve": "webpack-dev-server --config webpack.config.js"
+  },
+  "author": "Xesenix",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.53",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.53",
+    "@babel/plugin-proposal-decorators": "^7.0.0-beta.53",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.53",
+    "@babel/preset-env": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0-beta.53",
+    "@babel/preset-stage-3": "^7.0.0-beta.53",
+    "@babel/preset-typescript": "^7.0.0-beta.53",
+    "babel-loader": "^8.0.0-beta.4",
+    "cross-env": "^5.2.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
